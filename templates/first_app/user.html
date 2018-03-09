@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+{% load staticfiles %}
+<!-- Static File -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/styles.css'}">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>This is user view</h1>
+    {% if users %}
+        {% for user in users %}
+        <div>
+            <h4>User Info</h4>
+            <p>{{user.name}}</p>
+            <p>{{user.last_name}}</p>
+            <p>{{user.email}}</p>
+        </div>   
+        {% endfor %}
+    {% endif %}
+
+  
+</body>
+
+</html>
